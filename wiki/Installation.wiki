@@ -45,15 +45,10 @@ For simplicity sake you can leave everything as is, and simply setup your virtua
 Also if you're not using localhost, it requires a little bit different configuration to work correctly. It was setup so that on my dev box things are configured one way but on the server the location of the database are a bit different. Have a look in site/core/configuration.asp and site/core/config/globals.asp to get an idea of how things are setup.
 
 Admin: http://localhost/project_name/admin/
-user: devo
-pass: aslp23p
+user: admin
+pass: admin
 
-When you create a new page, you must have appropriate rights on the site/ folder to be able to add a file.  the IUSR_ has to have write rights on that folder i believe. This was my solution to getting around not having a url rewrite module available on the production server (1and1.com). The file created can be placed in subfolders and its contents are simply an include of 404.asp (the file that currently drives everything on the site). 
+When you create a new page, you must have appropriate rights on the site/ folder to be able to add a file.  The IUSR_ has to have write rights on that folder i believe. This was my solution to getting around not having a url rewrite module available on the production server (1and1.com). The file created can be placed in subfolders and its contents are simply an include of 404.asp (the file that currently drives everything on the site). 
 
 
 = Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
