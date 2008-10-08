@@ -6,10 +6,10 @@ ASP VBScript CMS is built for rapid configuration AND deployment to enable you t
 
 _NOTE:_ We tend towards the lemma of _convention over configuration_, so if you're cool with that, things will be much quicker to setup.  Of course, however, if your dev or production environment is more customized, the cms facilitates easy changes to fit your needs. 
 
-# Unzip and create a new project.
-# Rename the database file.
-# Update the SOURCEID in the configuration file. 
-# Create the virtual directory in IIS.
+  # Unzip and create a new project.
+  # Rename the database file.
+  # Update the SOURCEID in the configuration file. 
+  # Create the virtual directory in IIS.
 
 Note that if your only testing out ASP VBScript CMS then you can simply unzip the file and skip to the last step, setting up your virtual directory, name it "asp-vbscript-cms"  and it _should_ work "out of the box" at http://localhost/asp-vbscript-cms/
 
