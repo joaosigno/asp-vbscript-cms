@@ -28,7 +28,7 @@ Rename the unzipped folder `asp-vbscript-cms` to the name of the project you are
   * `C:\path\to\new_project\`  to mean the project path
   * `C:\path\to\new_project\site\`  to mean the site root
 
-_TIP_: Creating a Project name, also referred to as the SOURCEID in the code, is best to keep it short and no funny characters (stick to lowercase letters and underscores/dashes if necessary). 
+_TIP_: Creating a Project name, also referred to as the SOURCEID in the code, is best to keep it short and no funny characters.  Please use lowercase letters, and employ underscores and dashes only if absolutely necessary.
 
 The standard project folder structure looks like this:
 
