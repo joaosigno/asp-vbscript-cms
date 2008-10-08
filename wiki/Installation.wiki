@@ -1,0 +1,59 @@
+#summary How to install asp-vbscript-cms on development (localhost) and production servers.
+
+= Introduction =
+
+ASP VBScript CMS is built for rapid configuration AND deployment to enable you to get your client sites up as quickly as possible. There are as little as 3 steps to getting setup on localhost. 
+
+_NOTE:_ We tend towards the lemma of _convention over configuration_, so if you're cool with that, things will be much quicker to setup.  Of course, however, if your dev or production environment is more customized, the cms facilitates easy changes to fit your needs. 
+
+
+# Unzip the downloaded project file (asp-vbscript-cms.zip) to your projects directory (`C:\Projects`  or `C:\Documents and Settings\username\My Documents\Projects\`).
+
+# Rename the unzipped folder `asp-vbscript-cms` to the name of the project you are creating. The project name (also refered to as the SOURCEID in the code) is best to keep it short and no funny characters (stick to lowercase letters and underscores/dashes if necessary). The result will be something like this:
+
+<code>
+project_name\
+.\db\   <-- database file sits outside the site root
+.\site\ <-- site root
+.\sources\  <-- any source files (information architecture doc, pdfs, psds, etc)
+</code>
+
+
+# Rename the database (mdb) file. 
+
+The system loader demands that the database must be named the same as the project name.
+
+Rename 
+
+.\db\asp-vbscript-cms.mdb  
+
+to:
+
+.\db\project_name.mdb
+
+# Create the virtual directory. 
+In IIS Administrator, Add a new virtual directory using the SITE folder (ex, `C:\path\to\project_name\site\` folder.  You should  name the virtual directory the same name as the database file in the previous step.
+ represents your project name so on your dev machine you'd get something like this:
+
+http://localhost/project_name/
+
+
+3) need to update also the project name "SOURCEID" to match db name and virtual directory in site/core/configuration.asp 
+
+For simplicity sake you can leave everything as is, and simply setup your virtual directory calling it devocms and it **should** work out of the box. 
+
+Also if you're not using localhost, it requires a little bit different configuration to work correctly. It was setup so that on my dev box things are configured one way but on the server the location of the database are a bit different. Have a look in site/core/configuration.asp and site/core/config/globals.asp to get an idea of how things are setup.
+
+Admin: http://localhost/project_name/admin/
+user: devo
+pass: aslp23p
+
+When you create a new page, you must have appropriate rights on the site/ folder to be able to add a file.  the IUSR_ has to have write rights on that folder i believe. This was my solution to getting around not having a url rewrite module available on the production server (1and1.com). The file created can be placed in subfolders and its contents are simply an include of 404.asp (the file that currently drives everything on the site). 
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
