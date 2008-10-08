@@ -32,7 +32,7 @@ _TIP_: Creating a Project name, also referred to as the SOURCEID in the code, is
 
 The standard project folder structure looks like this:
 
-<code>
+{{{
 project_name\
 .\db\   <-- database file sits outside the site root
 .\site\ <-- site root
@@ -41,7 +41,7 @@ project_name\
 .\site\modules\ <-- the modules folder
 .\site\ 
 .\sources\  <-- any source files (information architecture doc, pdfs, psds, etc)
-</code>
+}}}
 
 
 ==2) Rename the database file.== 
@@ -65,14 +65,12 @@ In IIS Administrator, add a new virtual directory using the SITE folder (ex, `C:
 Now your done setting up the CMS on localhost you will be able to access your new site's front end here:
 
   * http://localhost/project_name/
+  * http://localhost/project_name/admin/
+    * user: `admin`
+    * pass: `admin`
 
 
-Admin: http://localhost/project_name/admin/
-user: admin
-pass: admin
-
-
-=Installing to Production Server=
+= Installing to Production Server =
 
 If you're not installing ASP VBScript CMS on your local machine (a.k.a localhost), it requires a little bit different configuration to work correctly. Initially the CMS was designed with a dual configuration in mind, so that we could deploy code/files to a production server without the need to maintain different configuration files. The bootstrap knows how to detect if the server is a testing/development server or a live site by looking at the url. 
 
@@ -80,7 +78,7 @@ There was also the issue of maintaining a legacy folder structure on the product
 
 Have a look in `.\site\core\configuration.asp` and `.\site\core\config\globals.asp` to get an idea of what kind of variables can be easily manipulated to customize your configuration.
 
-=Troubleshooting on Localhost=
+= Troubleshooting on Localhost =
 
 *Getting strange errors creating new pages in the admin?*
 
