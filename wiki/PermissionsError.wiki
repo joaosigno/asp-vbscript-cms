@@ -5,12 +5,10 @@
 Open Windows Explorer to the parent folder where asp-vbscript-cms folder resides.
 
  # ensure advanced security tab exists on the Properties menu, if not, then:
-
-  * From the Explorer Menubar, select:  Tools > Folder Options... 
-  * Then select the "View" tab.
-  * Disable "Use simple file sharing (recommended)".
-  * Click Apply, then OK, to close the Folder Options dialog window.
-
+   * From the Explorer Menubar, select:  Tools > Folder Options... 
+   * Then select the "View" tab.
+   * Disable "Use simple file sharing (recommended)".
+   * Click Apply, then OK, to close the Folder Options dialog window.
  # Right click the asp-vbscript-cms folder, select Properties. 
  # Open "Security" tab.
  # Click the "Add.." button to open the "Select Users or Groups" window.
