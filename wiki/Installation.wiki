@@ -10,7 +10,7 @@ _NOTE:_ We tend towards the lemma of _convention over configuration_, so if you'
 
 = Fast Install = 
 
- # Download and unzip a [FeaturedRelease http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] (eg, asp-vbscript-cms_x.x.zip) in your My Documents folder.
+ # Download and unzip a [http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured FeaturedRelease] (eg, asp-vbscript-cms_x.x.zip) in your My Documents folder.
  # Add `IUSR_` permissions to the folder you just created `My Documents\asp-vbscript-cms` (See [HowTo PermissionsError] for instructions.)
  # Add a Virtual Host in IIS administrator with:
    # Alias:  `cms`
@@ -38,7 +38,7 @@ _NOTE: Its not recommended to put projects directly in the wwwroot (`C:\Inetpub\
 
 ==2) Download, Unzip, and create a new project.==
 
-Download and unzip a [FeaturedRelease http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] (eg, asp-vbscript-cms_x.x.zip) to your projects directory. 
+Download and unzip a [http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured FeaturedRelease] (eg, asp-vbscript-cms_x.x.zip) to your projects directory. 
 
 Rename the unzipped folder `asp-vbscript-cms` to the name of the project you are creating. For our purposes, we'll be creating a project "new_project", thus we get:
 
