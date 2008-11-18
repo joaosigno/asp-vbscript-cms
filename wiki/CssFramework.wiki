@@ -24,8 +24,8 @@ On any page in your site, you can test out any of the css layouts exposed by the
 
 If you've got the demo installed. Try this:  
 
-http://localhost/cms/contact.asp
-http://localhost/cms/contact.asp?css=main-1col.css
-http://localhost/cms/contact.asp?css=sub.css
+ * http://localhost/cms/contact.asp
+ * http://localhost/cms/contact.asp?css=main-1col.css
+ * http://localhost/cms/contact.asp?css=sub.css
 
 Although its currently not implemented you could use this existing functionality to set up a "print.css" layout as well.
