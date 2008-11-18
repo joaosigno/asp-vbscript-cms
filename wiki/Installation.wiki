@@ -27,7 +27,7 @@ This section shows you how easy it is to create multiple instantiations of the c
   # Update the SOURCEID in the configuration file. 
   # Create the virtual directory in IIS.
 
-==1) Setup your projects directory
+==1) Setup your projects directory.==
 
 Suppose you're going to be turning out various web projects quickly. I would setup a specific project directory to keep everything organized. It can can be anywhere you like. I recommend either creating a project folder in the root folder of your local disk, or in your personal user's folder. 
 
