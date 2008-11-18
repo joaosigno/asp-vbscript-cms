@@ -3,7 +3,16 @@
 
 <wiki:toc max_depth="2" />
 
-= Introduction =
+= Fast Install = 
+
+ # Unzip the downloaded project file from our [Featured Downloads http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] section (asp-vbscript-cms.zip) to your My Documents folder.
+ # Add `IUSR_` permissions to the folder you just created `My Documents\asp-vbscript-cms` (See [HowTo PermissionsError] for instructions.)
+ # Add a Virtual Host in IIS administrator with:
+   # Alias:  `cms`
+   # Directory:  `C:\Documents and Settings\USER NAME\My Documents\asp-vbscript-cms\site\`
+ # Open your favorite webbrowser to http://localhost/cms/
+
+= Detailed Customization Instructions =
 
 ASP VBScript CMS is built for rapid configuration AND deployment to enable you to get your client sites up as quickly as possible. There are as little as 3 steps to getting setup on localhost. 
 
@@ -53,14 +62,14 @@ project_name\
 
 The system loader demands that the database must be named the same as the project name.
 
-Rename `.\db\asp-vbscript-cms.mdb`  to: `.\db\project_name.mdb`
+Rename `.\db\cms.mdb`  to: `.\db\project_name.mdb`
 
 _At this time only Microsoft Access MDB files are supported by ASP VBScript CMS._
 
 
 ==3) Update the project config file's SOURCEID.==
 
-Open the file `.\site\core\configuration.asp` and change the `SOURCEID` string to match db name and project name. 
+Open the file `.\site\core\configuration.asp` and change the `SOURCEID` string to match db name and project name.
 
 ==4) Create the virtual directory.==
 
