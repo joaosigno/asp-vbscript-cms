@@ -1,0 +1,31 @@
+#summary Turn your design into a full site in a snap.
+
+ASP VBScript CMS employs a modular CSS Framework based on ideas formulated by [http://contentwithstyle.co.uk/content/modular-css/ Mike Stenhouse] in 2007.
+
+Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScript CMS have resulted in the following: 
+
+ # Maintain an in-built template system that generates the _same_ container HTML (aka page template) across all CMS installations. You may of course customize `\site\core\include\template.asp` but its not necessary if you follow the Framework.
+ # Maintain a set of css layouts stylesheets akin to wireframes (eg, 2-column, 3-column, horizontal or vertical navbar).  The result looks like what you find in [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/ `\site\styles\css-framework\`] folder. 
+   * layout-navleft-1col.css    
+   * layout-navleft-2col.css
+   * layout-navoff-1col.css
+   * layout-navtop-1col.css
+   * layout-navtop-3col.css  
+   * layout-navtop-localleft.css
+   * layout-navtop-subright.css
+ # Override the base wireframe with a custom design that changes for every site [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/layout.css styles/css-framework/layout.css]).
+ # Choose the layouts to expose to the CMS admin interface by placing them in the `\site\styles\` folder.
+ # Each page's layout in the site can be changed on the fly in the admin control panel. 
+
+
+==Quick Prototyping
+
+On any page in your site, you can test out any of the css layouts exposed by the styles folder by adding a query string to the url. For example: ?css=main.css   or ?css=main-1col.css 
+
+If you've got the demo installed. Try this:  
+
+http://localhost/cms/contact.asp
+http://localhost/cms/contact.asp?css=main-1col.css
+http://localhost/cms/contact.asp?css=sub.css
+
+Although its currently not implemented you could use this existing functionality to set up a "print.css" layout as well.
