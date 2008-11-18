@@ -1,41 +1,44 @@
 #summary How to install asp-vbscript-cms on development (localhost) and production servers.
 #labels HowTo
 
-<wiki:toc max_depth="2" />
-
-= Fast Install = 
-
- # Unzip the downloaded project file from our [Featured Downloads http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] section (asp-vbscript-cms.zip) to your My Documents folder.
- # Add `IUSR_` permissions to the folder you just created `My Documents\asp-vbscript-cms` (See [HowTo PermissionsError] for instructions.)
- # Add a Virtual Host in IIS administrator with:
-   # Alias:  `cms`
-   # Directory:  `C:\Documents and Settings\USER NAME\My Documents\asp-vbscript-cms\site\`
- # Open your favorite webbrowser to http://localhost/cms/
-
-= Detailed Customization Instructions =
-
 ASP VBScript CMS is built for rapid configuration AND deployment to enable you to get your client sites up as quickly as possible. There are as little as 3 steps to getting setup on localhost. 
 
 _NOTE:_ We tend towards the lemma of _convention over configuration_, so if you're cool with that, things will be much quicker to setup.  Of course, however, if your dev or production environment is more customized, the cms facilitates easy changes to fit your needs. 
 
-  # Unzip and create a new project.
+
+<wiki:toc max_depth="2" />
+
+= Fast Install = 
+
+ # Download and unzip a [FeaturedRelease http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] (eg, asp-vbscript-cms_x.x.zip) in your My Documents folder.
+ # Add `IUSR_` permissions to the folder you just created `My Documents\asp-vbscript-cms` (See [HowTo PermissionsError] for instructions.)
+ # Add a Virtual Host in IIS administrator with:
+   # Alias:  `cms`
+   # Directory:  `C:\Documents and Settings\USER NAME\My Documents\asp-vbscript-cms\site\`
+ # Open your favorite webbrowser to `http://localhost/cms/`
+
+= Detailed Customization Instructions =
+
+This section shows you how easy it is to create multiple instantiations of the cms, to get you off the ground running with various projects quickly.
+
+  # Setup a projects directory
+  # Download, Unzip, and create a new project.
   # Rename the database file.
   # Update the SOURCEID in the configuration file. 
   # Create the virtual directory in IIS.
 
-Note that if your only testing out ASP VBScript CMS then you can simply unzip the file and skip to the last step, setting up your virtual directory, name it "asp-vbscript-cms"  and it _should_ work "out of the box" at http://localhost/asp-vbscript-cms/
+==1) Setup your projects directory
 
-
-
-==1) Unzip and create new project.==
-
-Unzip the downloaded project file from our [Featured Downloads http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] section (asp-vbscript-cms.zip) to your projects directory. The path to the project can be anything you like. I recommend either creating a project folder in the root folder of your local disk, or in your personal user's folder. 
+Suppose you're going to be turning out various web projects quickly. I would setup a specific project directory to keep everything organized. It can can be anywhere you like. I recommend either creating a project folder in the root folder of your local disk, or in your personal user's folder. 
 
   * `C:\Projects\`
   * `C:\Documents and Settings\username\My Documents\Projects\`
 
-_NOTE: You may also place the project directly in the wwwroot (`C:\Inetpub\wwwroot\`), but then you may notice that the db/ and collateral folders are exposed. This is why its preferred to use external folders + virtual directories._
+_NOTE: Its not recommended to put projects directly in the wwwroot (`C:\Inetpub\wwwroot\`) because the db/ and collateral/ folders are exposed. It is preferred to use external folders + virtual directories always._
 
+==2) Download, Unzip, and create a new project.==
+
+Download and unzip a [FeaturedRelease http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] (eg, asp-vbscript-cms_x.x.zip) to your projects directory. 
 
 Rename the unzipped folder `asp-vbscript-cms` to the name of the project you are creating. For our purposes, we'll be creating a project "new_project", thus we get:
 
@@ -58,7 +61,7 @@ project_name\
 }}}
 
 
-==2) Rename the database file.== 
+==3) Rename the database file.== 
 
 The system loader demands that the database must be named the same as the project name.
 
@@ -67,11 +70,11 @@ Rename `.\db\cms.mdb`  to: `.\db\project_name.mdb`
 _At this time only Microsoft Access MDB files are supported by ASP VBScript CMS._
 
 
-==3) Update the project config file's SOURCEID.==
+==4) Update the project config file's SOURCEID.==
 
 Open the file `.\site\core\configuration.asp` and change the `SOURCEID` string to match db name and project name.
 
-==4) Create the virtual directory.==
+==5) Create the virtual directory.==
 
 In IIS Administrator, add a new virtual directory using the SITE folder (ex, `C:\path\to\project_name\site\` folder.  *You must name the virtual directory the same name as the project name, database file name, and SOURCEID in the previous steps.*
 
@@ -103,7 +106,7 @@ Have a look in `.\site\core\configuration.asp` and `.\site\core\config\globals.a
 
 *Getting strange errors creating new pages in the admin?*
 
-In order to create pages, IIS must be given permission to create files in your project folder.  The `IUSR_` must have write permissions on the `.\site\` folder. For more info see PermissionsError 
+In order to create pages, IIS must be given permission to create files in your project folder.  The `IUSR_` must have write permissions on the `.\site\` folder. For more info see PermissionsError. 
 
 This was my solution to getting around not having a url rewrite module available on the production server (1and1.com).
 
