@@ -4,8 +4,8 @@ ASP VBScript CMS employs a modular CSS Framework based on ideas formulated by [h
 
 Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScript CMS have resulted in the following: 
 
- # Maintain an in-built template system that generates the _same_ container HTML (aka page template) across all CMS installations. You may of course customize [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/core/include/template.asp `\site\core\include\template.asp`] but its not necessary if you follow the Framework.
- # Maintain a set of css layouts stylesheets akin to wireframes (eg, 2-column, 3-column, horizontal or vertical navbar).  The result looks like what you find in [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/ `\site\styles\css-framework\`] folder. 
+ # Maintain an in-built template system that generates the _same_ container HTML (aka page template) across all CMS installations. You may of course customize the template file ([http://asp-vbscript-cms.googlecode.com/svn/trunk/site/core/include/template.asp /site/core/include/template.asp]) but its not necessary if you follow the Framework.
+ # Maintain a set of css layouts stylesheets akin to wireframes (eg, 2-column, 3-column, horizontal or vertical navbar).  The comes with a handful of layouts in the [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/ /site/styles/css-framework/] folder.
    * layout-navleft-1col.css    
    * layout-navleft-2col.css
    * layout-navoff-1col.css
@@ -14,7 +14,8 @@ Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScrip
    * layout-navtop-localleft.css
    * layout-navtop-subright.css
  # Override the base wireframe with a custom design that changes for every site [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/layout.css styles/css-framework/layout.css]).
- # Choose the layouts to expose to the CMS admin interface by placing them in the `\site\styles\` folder.
+ # Keep standard functionality and common styles that all pages use modular. 
+ # Combine the wireframes, standard, and the layout.css together in new stylesheets located in the [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/ /site/styles/] folder. This exposes the layouts to the CMS admin panel, and enables quick prototyping (see below).
  # Each page's layout in the site can be changed on the fly in the admin control panel. 
 
 
