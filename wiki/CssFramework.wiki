@@ -4,7 +4,7 @@ ASP VBScript CMS employs a modular CSS Framework based on ideas formulated by [h
 
 Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScript CMS have resulted in the following: 
 
- # Maintain an in-built template system that generates the _same_ container HTML (aka page template) across all CMS installations. You may of course customize `\site\core\include\template.asp` but its not necessary if you follow the Framework.
+ # Maintain an in-built template system that generates the _same_ container HTML (aka page template) across all CMS installations. You may of course customize [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/core/include/template.asp `\site\core\include\template.asp`] but its not necessary if you follow the Framework.
  # Maintain a set of css layouts stylesheets akin to wireframes (eg, 2-column, 3-column, horizontal or vertical navbar).  The result looks like what you find in [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/ `\site\styles\css-framework\`] folder. 
    * layout-navleft-1col.css    
    * layout-navleft-2col.css
