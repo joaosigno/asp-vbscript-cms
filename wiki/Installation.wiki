@@ -1,6 +1,8 @@
 #summary How to install asp-vbscript-cms on development (localhost) and production servers.
 #labels HowTo
 
+<wiki:toc max_depth="2" />
+
 = Introduction =
 
 ASP VBScript CMS is built for rapid configuration AND deployment to enable you to get your client sites up as quickly as possible. There are as little as 3 steps to getting setup on localhost. 
