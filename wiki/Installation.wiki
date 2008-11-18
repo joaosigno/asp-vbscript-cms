@@ -1,4 +1,5 @@
 #summary How to install asp-vbscript-cms on development (localhost) and production servers.
+#labels HowTo
 
 = Introduction =
 
@@ -17,10 +18,12 @@ Note that if your only testing out ASP VBScript CMS then you can simply unzip th
 
 ==1) Unzip and create new project.==
 
-Unzip the downloaded project file (asp-vbscript-cms.zip) to your projects directory. The path to the project can be anything you like:
+Unzip the downloaded project file from our [Featured Downloads http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured] section (asp-vbscript-cms.zip) to your projects directory. The path to the project can be anything you like. I recommend either creating a project folder in the root folder of your local disk, or in your personal user's folder. 
 
   * `C:\Projects\`
   * `C:\Documents and Settings\username\My Documents\Projects\`
+
+_NOTE: You may also place the project directly in the wwwroot (`C:\Inetpub\wwwroot\`), but then you may notice that the db/ and collateral folders are exposed. This is why its preferred to use external folders + virtual directories._
 
 
 Rename the unzipped folder `asp-vbscript-cms` to the name of the project you are creating. For our purposes, we'll be creating a project "new_project", thus we get:
@@ -35,12 +38,12 @@ The standard project folder structure looks like this:
 {{{
 project_name\
 .\db\   <-- database file sits outside the site root
-.\site\ <-- site root
+.\site\ <-- site web root
 .\site\core\  <-- all CMS core files
 .\site\admin\ <-- CMS Administration interface 
 .\site\modules\ <-- the modules folder
 .\site\ 
-.\sources\  <-- any source files (information architecture doc, pdfs, psds, etc)
+.\collateral\  <-- any project collateral (information architecture doc, pdfs, psds, etc)
 }}}
 
 
