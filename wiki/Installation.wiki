@@ -94,8 +94,8 @@ Have a look in `.\site\core\configuration.asp` and `.\site\core\config\globals.a
 
 *Getting strange errors creating new pages in the admin?*
 
-In order to create pages, IIS must be given permission to create files in your project folder.  The `IUSR_` must have write permissions on the `.\site\` folder. 
+In order to create pages, IIS must be given permission to create files in your project folder.  The `IUSR_` must have write permissions on the `.\site\` folder. For more info see PermissionsError 
 
 This was my solution to getting around not having a url rewrite module available on the production server (1and1.com).
 
-The file created can be placed in subfolders and its contents are simply an include of 404.asp (the file that currently drives everything on the site). 
+The file created can be placed in subfolders and its contents are simply an include of `404.asp`. This script "drives" everything on the site with respect to url interpretation and grabbing the appropriate content from the database. 
