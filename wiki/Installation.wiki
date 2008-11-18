@@ -11,7 +11,7 @@ _NOTE:_ We tend towards the lemma of _convention over configuration_, so if you'
 = Fast Install = 
 
  # Download and unzip a [http://code.google.com/p/asp-vbscript-cms/downloads/list?q=label:Featured FeaturedRelease] (eg, asp-vbscript-cms_x.x.zip) in your My Documents folder.
- # Add `IUSR_` permissions to the folder you just created `My Documents\asp-vbscript-cms` (See [HowTo PermissionsError] for instructions.)
+ # Add `IUSR_` permissions to the folder you just created `My Documents\asp-vbscript-cms` (See [PermissionsError HowTo] for instructions.)
  # Add a Virtual Host in IIS administrator with:
    # Alias:  `cms`
    # Directory:  `C:\Documents and Settings\USER NAME\My Documents\asp-vbscript-cms\site\`
