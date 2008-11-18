@@ -15,13 +15,13 @@ Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScrip
    * layout-navtop-subright.css
  # Override the base wireframe with a custom design that changes for every site [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/layout.css styles/css-framework/layout.css]).
  # Keep standard functionality and common styles that all pages use modular. 
- # Combine the wireframes, standard, and the layout.css together in new stylesheets located in the [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/ /site/styles/] folder. This exposes the layouts to the CMS admin panel, and enables quick prototyping (see below).
- # Each page's layout in the site can be changed on the fly in the admin control panel. 
+ # Combine the wireframes, standard, and the layout.css together in new stylesheets located in the [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/ /site/styles/] folder.
 
+Note that the last step is KEY. Stylesheets with the various various layouts you've implemented in the /site/styles/ folder get exposed to the CMS admin panel.  Page layout can be changed on the fly in the admin control panel via a drop-down form select box. These styles are also enabled for quick prototyping (see below).
 
 ==Quick Prototyping==
 
-On any page in your site, you can test out any of the css layouts exposed by the styles folder by adding a query string to the url. For example: ?css=main.css   or ?css=main-1col.css 
+On any page in your site, you can test out any of the page layouts exposed by the /site/styles/ folder by adding a query string to the url. For example: ?css=main.css   or ?css=main-1col.css 
 
 If you've got the demo installed. Try this:  
 
