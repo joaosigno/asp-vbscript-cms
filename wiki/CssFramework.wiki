@@ -18,7 +18,7 @@ Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScrip
  # Each page's layout in the site can be changed on the fly in the admin control panel. 
 
 
-==Quick Prototyping
+==Quick Prototyping==
 
 On any page in your site, you can test out any of the css layouts exposed by the styles folder by adding a query string to the url. For example: ?css=main.css   or ?css=main-1col.css 
 
