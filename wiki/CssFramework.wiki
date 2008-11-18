@@ -13,7 +13,7 @@ Mike's CSS Framework is a really clever thing.  His ideas applied to ASP VBScrip
    * layout-navtop-3col.css  
    * layout-navtop-localleft.css
    * layout-navtop-subright.css
- # Override the base wireframe with a custom design that changes for every site (Typically the custom design css file is [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/layout.css styles/css-framework/layout.css] but you could rename it to your project_name.css to distinguish more easily if you so desire).
+ # Override the base wireframe with a custom design that changes for every site, but holds the styles that stay the same across all different page layouts (eg, color scheme and background images). (Typically the custom design css file is (poorly named)[http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/css-framework/layout.css styles/css-framework/layout.css]; you could rename it to your project_name.css to distinguish more easily if you so desire).
  # Keep standard functionality and common styles that all pages use modular. 
  # Combine the wireframes, standard, and the layout.css together in new stylesheets located in the [http://asp-vbscript-cms.googlecode.com/svn/trunk/site/styles/ /site/styles/] folder.
 
