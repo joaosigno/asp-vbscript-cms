@@ -104,6 +104,10 @@ Have a look in `.\site\core\configuration.asp` and `.\site\core\config\globals.a
 
 = Troubleshooting on Localhost =
 
+*500 Server Error upon installation?*
+
+Check out [ErrorObjectRequiredRS]  you probably installed the software incorrectly.
+
 *Getting strange errors creating new pages in the admin?*
 
 In order to create pages, IIS must be given permission to create files in your project folder.  The `IUSR_` must have write permissions on the `.\site\` folder. For more info see PermissionsError. 
