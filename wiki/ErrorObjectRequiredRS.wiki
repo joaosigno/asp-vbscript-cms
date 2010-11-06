@@ -1,4 +1,4 @@
-#The CMS gives me a 500 Error Object Required: 'rs'
+#summary The CMS gives me a 500 Error Object Required: 'rs'
 
 If you installed the application on localhost and all you get is the following error:
 
