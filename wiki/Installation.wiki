@@ -83,7 +83,7 @@ Now your done setting up the CMS on localhost you will be able to access your ne
   * http://localhost/project_name/
   * http://localhost/project_name/admin/
     * user: `admin`
-    * pass: `admin`
+    * pass: `password`
 
 
 = Installing to Production Server =
