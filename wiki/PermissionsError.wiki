@@ -14,8 +14,8 @@ Open Windows Explorer to the parent folder where asp-vbscript-cms folder resides
  # Click the "Add.." button to open the "Select Users or Groups" window.
  # Click the Advanced button. 
  # Click the Find Now button.
- # In the list that appears, find the user whose name starts with "IUSR_" (the complete name should be "IUSR_YOUR-MACHINE-NAME").
- # Select the ISUR and click the OK button to return to the normal "Select Users or Groups" window.
+ # In the list that appears, find the user whose name starts with "IUSR" (the complete name should be "IUSR_YOUR-MACHINE-NAME").
+ # Select the IUSR and click the OK button to return to the normal "Select Users or Groups" window.
  # Click again the OK button to close the "Select Users or Groups" window. 
  # Back again in the Security tab, select the IUSR account we just added from the listing of Groups and users.
  # In the permissions table, enable the "Full Control" checkbox for the IUSR. 
