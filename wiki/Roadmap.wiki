@@ -5,7 +5,7 @@
 There are various aspects of the CMS that are incomplete, or where the implementation could be improved.
 
 
-* Standardize and simplify module functionality.
-* Distinguish between modules and blocks.
-* Re-define module 'locations'  as block  'regions'.
-* Add better support for theme customizations.
+ * Standardize and simplify module functionality.
+ * Distinguish between modules and blocks.
+ * Re-define module 'locations'  as block  'regions'.
+ * Add better support for theme customizations.
