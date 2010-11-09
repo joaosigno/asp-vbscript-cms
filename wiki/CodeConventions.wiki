@@ -1,0 +1,46 @@
+#summary Coding standards and conventions for ASP-VBScript-CMS.
+
+= Coding Standards =
+
+Coding standards are Language-level standards, and to be honest, ASP VBScript doesnt have many.  The VBScript language itself is case-insensitive. Newlines are important, indentation is not, and there is only one form of comments.  We have to instate some code-level conventions to follow to improve code readability and sanity, which will be a major contributing factor to long-term maintainability. As this project is not under continual development, easy-to-read code will be of huge importance to be able to come back to pick up on after leaving the code sitting for years on end :)
+
+*Options Explicit*
+
+VBScript is a lazy language, its of extreme importance for code maintainability to force all variables to be declared before instantiation.
+
+
+= Coding Conventions =
+
+
+*Indentation*
+
+Use tabs to indent your code. You should configure your code editor to set the tabstop to 4 spaces.
+
+*Case*
+
+VBScript is case-insensitive.  However, we generally try to keep all language-specific keywords in lowercase:
+
+{{{
+if [...] then
+    'execute some code
+end if
+}}}
+
+{{{
+class Apple
+    public function class_initialize()
+        'initialize object
+    end function
+end class
+}}}
+
+*Whitespace*
+
+Remove all trailing whitespace when saving your code.
+
+Separate commands with a newline.  The one exception is for declaring variables.  Since we use `Options Explicit` it is possible to chain the definition and the variable assignment on a single line, using a *colon* to separate the two commands.
+
+{{{
+dim products : set products = Server.CreateObject("Scripting.Dictionary")
+}}}
+
