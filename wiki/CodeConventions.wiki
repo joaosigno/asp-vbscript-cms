@@ -18,7 +18,42 @@ Use tabs to indent your code. You should configure your code editor to set the t
 
 *Case*
 
-VBScript is case-insensitive.  However, we generally try to keep all language-specific keywords in lowercase:
+VBScript is case-insensitive.  This tends to result in sloppy inconsistencies, and less readable / maintainable code. Here are our suggested conventions for a consistent use of case throughout the application:
+
+Use lowercase for global and local variables.
+{{{
+'**
+'* Intialize the global filesystem object.
+dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
+}}}
+
+Use uppercase for constants.
+{{{
+'**
+'* Default page encoding.
+const DEFAULT_ENCODING = "utf8"
+}}}
+
+Prefix class variables with 'm_'.
+{{{
+'**
+'* Class HelloWorld prints a message on a specific date.
+class HelloWorld
+    private m_message
+    private m_date
+end class
+}}}
+
+System resources and objects should use capitalization:
+{{{
+Response.Write "Hello world!"
+dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
+}}}
+
+Use lowercase for the language-specific keywords:
+{{{
+if, then, end, for, each, class, public, private,  let, set.
+}}}
 
 {{{
 if [...] then
@@ -26,6 +61,7 @@ if [...] then
 end if
 }}}
 
+Use lowercase
 {{{
 class Apple
     public function class_initialize()
@@ -34,7 +70,17 @@ class Apple
 end class
 }}}
 
-*Whitespace*
+Use suggested mixed-case for language-specific VBScript Constants,  eg vbCrLf.
+{{{
+Response.Write("Hello world, followed by a newline." & vbCrLf)
+}}}
+
+Use uppercase for Keywords:
+{{{
+TRUE, FALSE, NULL, EMPTY, NOTHING
+}}}
+
+=== Whitespace ===
 
 Remove all trailing whitespace when saving your code.
 
@@ -44,3 +90,29 @@ Separate commands with a newline.  The one exception is for declaring variables.
 dim products : set products = Server.CreateObject("Scripting.Dictionary")
 }}}
 
+Use a single whitespace to separate elements in:
+*Assignments*
+ * incorrect: `x=y`
+ * correct: `x = y`
+*Logical operands* (required by language)
+ * correct: `if x and y or z then`
+*String Concatenation*
+ * incorrect: `x =  x&y&z&"<br/>"`
+ * correct: `x = x & y & z & "<br/>"`
+*Expressions*
+ * incorrect: `if x<>"" then`,  `if x=5 then`
+ * correct: `if x <> "" then`,   `if x = 5 then`
+*Math calculations*
+ * incorrect: `y=y+1`
+ * correct:  `y = y + 1`
+
+=== Parentheses ===
+Do not use whitespace inside parentheses:
+
+ * incorrect: `if ( x and y ) or z then`
+ * correct: `if (x and y) or z then`
+
+* incorrect: `if ( cstr( x ) <> cstr ( y ) ) then`
+* correct: `if (cstr(x) <> cstr(y)) then`
+
+If using parentheses to group expressions in conditional statements, use a single whitespace after the if.
