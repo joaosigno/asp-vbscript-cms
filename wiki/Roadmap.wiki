@@ -5,7 +5,8 @@
 There are various aspects of the CMS that are incomplete, or where the implementation could be improved.
 
 
- * Improve global variable and tokenizer support. (PLANNED)
+ * Improve global variable and token support. (PLANNED)
+ * Code Cleanup:  instate coding standards, documentation, remove trailing whitespace, remove variant-type elements from variable names. remove 'tbl' prefixes from database tables.
  * Standardize and simplify module functionality.
  * Distinguish between modules and blocks.
  * Re-define 'module locations'  as 'block regions'.
