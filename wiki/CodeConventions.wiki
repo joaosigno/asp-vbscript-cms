@@ -112,7 +112,7 @@ Do not use whitespace inside parentheses:
  * incorrect: `if ( x and y ) or z then`
  * correct: `if (x and y) or z then`
 
-* incorrect: `if ( cstr( x ) <> cstr ( y ) ) then`
-* correct: `if (cstr(x) <> cstr(y)) then`
+ * incorrect: `if ( cstr( x ) <> cstr ( y ) ) or z then`
+ * correct: `if (cstr(x) <> cstr(y)) or z then`
 
 If using parentheses to group expressions in conditional statements, use a single whitespace after the if.
