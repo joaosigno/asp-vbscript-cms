@@ -22,22 +22,20 @@ VBScript is case-insensitive.  This tends to result in sloppy inconsistencies, a
 
 Use lowercase for global and local variables.
 <code language="vb">
-'**
-'* Intialize the global filesystem object.
+' Intialize the global filesystem object.
 dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
 </code>
 
 Use uppercase for constants.
 <code language="vb">
-'**
-'* Default page encoding.
+' Default page encoding.
 const DEFAULT_ENCODING = "utf8"
 </code>
 
 Prefix class variables with `m_`.
 <code language="vb">
-'**
-'* Class HelloWorld prints a message on a specific date.
+'! @class HelloWorld
+'! HelloWorld prints a message on a specific date.
 class HelloWorld
     private m_message
     private m_date
@@ -46,13 +44,19 @@ end class
 
 Use lowercase for [http://msdn.microsoft.com/en-us/library/7aw9cadb.aspx VBScript statements]:
 <code language="vb">
-if..then..else, while...wend, end, for, each, class, public, private, let, set, [et cetera]
+if..then..else...end if
+while...wend
+for each...next
+do...while
+class public private
+function sub
+get let set
+[et cetera]
 </code>
 
 Use lowercase for [http://msdn.microsoft.com/en-us/library/3ca8tfek.aspx VBScript functions]
 <code language="vb">
-x = cstr(abs(y * 1000))
-</code>
+x = cstr(abs(y * 1000))</code>
 
 Use suggested mixed-case for language-specific VBScript Constants,  eg vbCrLf.
 <code language="vb">
@@ -61,7 +65,11 @@ Response.Write("Hello world, followed by a newline." & vbCrLf)
 
 Use uppercase for [http://msdn.microsoft.com/en-us/library/f8tbc79x.aspx VBScript keywords]:
 <code language="vb">
-TRUE, FALSE, NULL, EMPTY, NOTHING
+x = TRUE 
+x = FALSE
+x = NULL
+x = EMPTY
+set x = NOTHING
 </code>
 
 Use capitalization for [http://msdn.microsoft.com/en-us/library/22h7a6k8.aspx VBScript Global System Objects] and their [http://msdn.microsoft.com/en-us/library/31y4b91d.aspx Properties] and *Methods*,  but use lowercase for instantiations and local objects.
@@ -89,29 +97,55 @@ dim products : set products = Server.CreateObject("Scripting.Dictionary")
 </code>
 
 Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cbft50a.aspx VBScript Operators] in:
+<code language="vb">
+'*Assignments* need appropriate whitespace.
+'incorrect:
+x=y
+'correct:
+x = y
 
-*Assignments*
- * incorrect: `x=y`
- * correct: `x = y`
-*Logical operands* (required by language)
- * correct: `if x and y or z then`
-*String Concatenation*
- * incorrect: `x =  x&y&z&"<br/>"`
- * correct: <code language="vb">x = x & y & z & "<br/>"</code>
-*Expressions*
- * incorrect: `if x<>"" then`,  `if x=5 then`
- * correct: `if x <> "" then`,   `if x = 5 then`
-*Math calculations*
- * incorrect: `y=y+1`
- * correct:  `y = y + 1`
+'*Logical operands* (required by language)
+'correct:
+if x and y or z then
+
+'*String Concatenation* need appropriate whitespace.
+'incorrect:
+x =  x&y&z&"<br/>"
+'correct
+x = x & y & z & "<br/>"
+
+'*Expressions* need appropriate whitespace.
+'incorrect: 
+if x<>"" then
+if x=5 then
+'correct: 
+if x <> "" then
+if x = 5 then
+
+'*Math calculations* need appropriate whitespace.
+'incorrect:
+y=y+1
+'correct:
+y = y + 1
+</code>
+
 
 === Parentheses ===
+
 Do not use whitespace inside parentheses:
 
- * incorrect: `if ( x and y ) or z then`
- * correct: `if (x and y) or z then`
+<code language="vb">
+'*Order of Operation* need appropriate whitespace.
+'incorrect:
+if ( x and y ) or z then
+'correct:
+if (x and y) or z then
 
- * incorrect: `if ( cstr( x ) <> cstr ( y ) ) or z then`
- * correct: `if (cstr(x) <> cstr(y)) or z then`
+'*Nested parentheses* need appropriate whitespace.
+'incorrect:
+if ( cstr( x ) <> cstr ( y ) ) or z then
+'correct:
+if (cstr(x) <> cstr(y)) or z then
+</code>
 
 If using parentheses to group expressions in conditional statements, use a single whitespace after the if.
