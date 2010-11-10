@@ -65,7 +65,7 @@ TRUE, FALSE, NULL, EMPTY, NOTHING
 }}}
 
 Use capitalization for [http://msdn.microsoft.com/en-us/library/22h7a6k8.aspx VBScript Global System Objects] and their [http://msdn.microsoft.com/en-us/library/31y4b91d.aspx Properties] and *Methods*,  but use lowercase for instantiations and local objects.
-<code language="vbscript">
+<code language="vb">
 ' Example 1: VBScript Err object.
 if Err.Number <> "" then
     Response.Write Err.Description
