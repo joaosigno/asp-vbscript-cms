@@ -44,30 +44,14 @@ class HelloWorld
 end class
 }}}
 
-System resources and objects should use capitalization:
+Use lowercase for [http://msdn.microsoft.com/en-us/library/7aw9cadb.aspx VBScript statements]:
 {{{
-Response.Write "Hello world!"
-dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
+if..then..else, while...wend, end, for, each, class, public, private, let, set, [et cetera]
 }}}
 
-Use lowercase for the language-specific keywords:
+Use lowercase for [http://msdn.microsoft.com/en-us/library/3ca8tfek.aspx VBScript functions]
 {{{
-if, then, end, for, each, class, public, private,  let, set.
-}}}
-
-{{{
-if [...] then
-    'execute some code
-end if
-}}}
-
-Use lowercase
-{{{
-class Apple
-    public function class_initialize()
-        'initialize object
-    end function
-end class
+x = cstr(abs(y * 1000))
 }}}
 
 Use suggested mixed-case for language-specific VBScript Constants,  eg vbCrLf.
@@ -75,9 +59,20 @@ Use suggested mixed-case for language-specific VBScript Constants,  eg vbCrLf.
 Response.Write("Hello world, followed by a newline." & vbCrLf)
 }}}
 
-Use uppercase for Keywords:
+Use uppercase for [http://msdn.microsoft.com/en-us/library/f8tbc79x.aspx VBScript keywords]:
 {{{
 TRUE, FALSE, NULL, EMPTY, NOTHING
+}}}
+
+Use capitalization for [http://msdn.microsoft.com/en-us/library/22h7a6k8.aspx System objects] and their Methods, but lowercase for [http://msdn.microsoft.com/en-us/library/31y4b91d.aspx properties]:
+{{{
+' Example 1: Err object.
+if Err.number <> "" then
+    Response.Write Err.description
+    Err.Clear
+end if
+' Example 2: Server object.
+dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
 }}}
 
 === Whitespace ===
@@ -90,7 +85,7 @@ Separate commands with a newline.  The one exception is for declaring variables.
 dim products : set products = Server.CreateObject("Scripting.Dictionary")
 }}}
 
-Use a single whitespace to separate elements in:
+Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cbft50a.aspx VBScript operators] in:
 *Assignments*
  * incorrect: `x=y`
  * correct: `x = y`
