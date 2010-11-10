@@ -8,6 +8,7 @@ Coding standards are Language-level standards, and to be honest, ASP VBScript do
 
 VBScript is a lazy language, its of extreme importance for code maintainability to force all variables to be declared before instantiation.
 
+If you're working on the codebase, you don't need to worry about this, as options explicit is set during application loading. (See `core/include/bootstrap.asp` for details.)
 
 = Coding Conventions =
 
