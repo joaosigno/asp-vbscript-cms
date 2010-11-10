@@ -21,48 +21,48 @@ Use tabs to indent your code. You should configure your code editor to set the t
 VBScript is case-insensitive.  This tends to result in sloppy inconsistencies, and less readable / maintainable code. Here are our suggested conventions for a consistent use of case throughout the application:
 
 Use lowercase for global and local variables.
-{{{
+<code language="vb">
 '**
 '* Intialize the global filesystem object.
 dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
-}}}
+</code>
 
 Use uppercase for constants.
-{{{
+<code language="vb">
 '**
 '* Default page encoding.
 const DEFAULT_ENCODING = "utf8"
-}}}
+</code>
 
 Prefix class variables with `m_`.
-{{{
+<code language="vb">
 '**
 '* Class HelloWorld prints a message on a specific date.
 class HelloWorld
     private m_message
     private m_date
 end class
-}}}
+</code>
 
 Use lowercase for [http://msdn.microsoft.com/en-us/library/7aw9cadb.aspx VBScript statements]:
-{{{
+<code language="vb">
 if..then..else, while...wend, end, for, each, class, public, private, let, set, [et cetera]
-}}}
+</code>
 
 Use lowercase for [http://msdn.microsoft.com/en-us/library/3ca8tfek.aspx VBScript functions]
-{{{
+<code language="vb">
 x = cstr(abs(y * 1000))
-}}}
+</code>
 
 Use suggested mixed-case for language-specific VBScript Constants,  eg vbCrLf.
-{{{
+<code language="vb">
 Response.Write("Hello world, followed by a newline." & vbCrLf)
-}}}
+</code>
 
 Use uppercase for [http://msdn.microsoft.com/en-us/library/f8tbc79x.aspx VBScript keywords]:
-{{{
+<code language="vb">
 TRUE, FALSE, NULL, EMPTY, NOTHING
-}}}
+</code>
 
 Use capitalization for [http://msdn.microsoft.com/en-us/library/22h7a6k8.aspx VBScript Global System Objects] and their [http://msdn.microsoft.com/en-us/library/31y4b91d.aspx Properties] and *Methods*,  but use lowercase for instantiations and local objects.
 <code language="vb">
@@ -84,9 +84,9 @@ Remove all trailing whitespace when saving your code.
 
 Separate commands with a newline.  The one exception is for declaring variables.  Since we use `Options Explicit` it is possible to chain the definition and the variable assignment on a single line, using a *colon* to separate the two commands.
 
-{{{
+<code language="vb">
 dim products : set products = Server.CreateObject("Scripting.Dictionary")
-}}}
+</code>
 
 Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cbft50a.aspx VBScript Operators] in:
 
@@ -97,7 +97,7 @@ Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cb
  * correct: `if x and y or z then`
 *String Concatenation*
  * incorrect: `x =  x&y&z&"<br/>"`
- * correct: `x = x & y & z & "<br/>"`
+ * correct: <code language="vb">x = x & y & z & "<br/>"<code>
 *Expressions*
  * incorrect: `if x<>"" then`,  `if x=5 then`
  * correct: `if x <> "" then`,   `if x = 5 then`
