@@ -97,7 +97,7 @@ Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cb
  * correct: `if x and y or z then`
 *String Concatenation*
  * incorrect: `x =  x&y&z&"<br/>"`
- * correct: <code language="vb">x = x & y & z & "<br/>"<code>
+ * correct: <code language="vb">x = x & y & z & "<br/>"</code>
 *Expressions*
  * incorrect: `if x<>"" then`,  `if x=5 then`
  * correct: `if x <> "" then`,   `if x = 5 then`
