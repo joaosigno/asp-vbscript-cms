@@ -38,8 +38,10 @@ Prefix class variables with `m_`.
 '! @class HelloWorld
 '! HelloWorld prints a message on a specific date.
 class HelloWorld
+
     private m_message
     private m_date
+
 end class
 </code>
 
@@ -57,7 +59,8 @@ get let set
 
 Use lowercase for [http://msdn.microsoft.com/en-us/library/3ca8tfek.aspx VBScript functions]
 <code language="vb">
-x = cstr(abs(y * 1000))</code>
+x = cstr(abs(y + 1000))
+</code>
 
 Use suggested mixed-case for language-specific VBScript Constants,  eg vbCrLf.
 <code language="vb">
