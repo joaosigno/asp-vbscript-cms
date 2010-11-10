@@ -34,7 +34,7 @@ Use uppercase for constants.
 const DEFAULT_ENCODING = "utf8"
 }}}
 
-Prefix class variables with 'm_'.
+Prefix class variables with `m_`.
 {{{
 '**
 '* Class HelloWorld prints a message on a specific date.
@@ -64,15 +64,18 @@ Use uppercase for [http://msdn.microsoft.com/en-us/library/f8tbc79x.aspx VBScrip
 TRUE, FALSE, NULL, EMPTY, NOTHING
 }}}
 
-Use capitalization for [http://msdn.microsoft.com/en-us/library/22h7a6k8.aspx System objects] and their Methods, but lowercase for [http://msdn.microsoft.com/en-us/library/31y4b91d.aspx properties]:
+Use capitalization for [http://msdn.microsoft.com/en-us/library/22h7a6k8.aspx VBScript Global System Objects] and their [http://msdn.microsoft.com/en-us/library/31y4b91d.aspx Properties] and *Methods*,  but use lowercase for instantiations and local objects.
 {{{
-' Example 1: Err object.
-if Err.number <> "" then
-    Response.Write Err.description
+' Example 1: VBScript Err object.
+if Err.Number <> "" then
+    Response.Write Err.Description
     Err.Clear
 end if
-' Example 2: Server object.
-dim fs : set fs = Server.CreateObject("Scripting.FileSystemObject")
+' Example 2: VBScript Server object used to instantiate a file_system object.
+dim file_system : set file_system = Server.CreateObject("Scripting.FileSystemObject")
+' Example 3:  Custom Logger class.
+dim log : set log = new CmsLogger
+log.error("this is an error message")
 }}}
 
 === Whitespace ===
@@ -85,7 +88,8 @@ Separate commands with a newline.  The one exception is for declaring variables.
 dim products : set products = Server.CreateObject("Scripting.Dictionary")
 }}}
 
-Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cbft50a.aspx VBScript operators] in:
+Use a single whitespace to separate [http://msdn.microsoft.com/en-us/library/1cbft50a.aspx VBScript Operators] in:'
+
 *Assignments*
  * incorrect: `x=y`
  * correct: `x = y`
