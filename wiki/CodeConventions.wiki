@@ -35,12 +35,20 @@ const DEFAULT_ENCODING = "utf8"
 
 Prefix class variables with `m_`.
 <code language="vb">
-'! @class HelloWorld
-'! HelloWorld prints a message on a specific date.
-class HelloWorld
+class HappyNewYear
 
     private m_message
+
     private m_date
+
+    public sub class_initialize()
+        m_date = "01-01-" & year()
+        m_message = "Happy New Year"
+    end sub
+
+    public function celebrate()
+        celebrate = m_message
+    end function
 
 end class
 </code>
@@ -54,7 +62,6 @@ do...while
 class public private
 function sub
 get let set
-[et cetera]
 </code>
 
 Use lowercase for [http://msdn.microsoft.com/en-us/library/3ca8tfek.aspx VBScript functions]
