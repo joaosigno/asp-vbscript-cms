@@ -110,7 +110,7 @@ if x and y or z then
 
 '*String Concatenation* need appropriate whitespace.
 'incorrect:
-x =  x&y&z&"<br/>"
+x = x&y&z&"<br/>"
 'correct
 x = x & y & z & "<br/>"
 
