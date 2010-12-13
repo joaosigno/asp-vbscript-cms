@@ -1,0 +1,134 @@
+ASP-VBScript-CMS Installation Instructions
+
+  This document is intended to help you get started using the application and
+  contains instructions for installing and configuring the software on your
+  local development server as well as on production servers.
+
+
+INTRODUCTION
+
+  ASP VBScript CMS is built for rapid configuration AND deployment to enable
+  you to get your client sites up as quickly as possible. There are as little
+  as three steps to getting setup on localhost.
+
+  ASP-VBScript-CMS tends to use more convention over configuration, so if you
+  accept this and go with the flow, things will be much quicker to setup. That
+  being said, the cms facilitates customization and configuration to fit your
+  development or production environment. These are the basic steps to setup the
+  software. Each step is explained in further detail below.
+
+    1. Unzip and create a new project.
+    2. Rename the database file.
+    3. Update the PROJECT_NAME in the configuration file.
+    4. Create the virtual directory in IIS.
+
+  Note that if your only testing out ASP VBScript CMS then you can simply unzip
+  the file and skip to the last step, setting up your virtual directory, name
+  it "cms" and it should work out of the box at http://localhost/cms/
+
+
+INSTALLATION
+
+
+1.a) Download and unzip the source code.
+
+  Unzip the downloaded project file (asp-vbscript-cms.zip) to your projects
+  directory. The path to the project can be anything you like. For example:
+
+    * C:\Projects\
+    * C:\Documents and Settings\username\My Documents\Projects\
+
+1.b) Create a new project
+
+  Rename the unzipped folder asp-vbscript-cms to the name of the project you
+  are creating. For demonstrative purposes, lets create a project called "New
+  Project".
+
+    * C:\Projects\new_project\ is the project path
+    * C:\Projects\new_project\public\ is the site root
+
+  TIP: When assigning a Project name (PROJECT_NAME in the code) please use only
+  lowercase letters ASCII letters, numbers, underscores and dashes. A short
+  string of 3 to 10 characters works best.  Spaces are not advised.
+
+  The standard project folder structure looks like this:
+
+    new_project\
+    .\core\   <-- all CMS core files
+    .\data\   <-- databases should be located above the web root
+    .\public\ <-- web root (aka public_html)
+    .\public\admin\ <-- default CMS Administration interface location
+    .\public\modules\ <-- add-on modules location
+    .\public\
+    .\assets\  <-- project assets (information architecture, design comps, etc)
+
+
+2) Update PROJECT_NAME in the configuration file to match the Project name.
+
+  Open the file .\core\configuration.asp and change the PROJECT_NAME string to
+  match the Project name.
+
+    const PROJECT_NAME = "new_project"
+
+
+3) Create the virtual directory.
+
+  In IIS Administrator, add a new virtual directory using the *public* folder,
+  NOT the project root folder!
+
+	* Virtual directory alias:  new_project
+	* Virtual directory folder: C:\Projects\new_project\public\
+
+  NOTE: The virtual directory alias MUST BE THE SAME as the the Project name,
+  the database file name, and the PROJECT_NAME configured in the previous steps.
+
+  Now your done setting up the CMS on localhost you will be able to access your
+  new project's front end website here:
+
+    * http://localhost/new_project/
+    * http://localhost/new_project/admin/
+        o user: admin
+        o pass: password
+
+
+
+
+INSTALLING TO PRODUCTION SERVER
+
+1) Upload the entire project to the webserver, via FTP (SFTP recommended), or
+  using your favorite code revision control utility. GIT and Subversion are our
+  recommended choices for keeping code in sync between development, staging,
+  and production servers.
+
+2) If you are using a production server, you should set the ENVIRONMENT const to
+  "production" in .\core\configuration.asp. While this is technically not a
+  required step, it helps to avoid accidental loss of data and other random
+  fatalities that often happen while synchronizing local development code with
+  production server code.
+
+  Rename or copy .\data\development.mdb to: .\data\production.mdb
+
+  *NOTE: Only Microsoft Access MDB files are supported by ASP VBScript CMS.*
+
+CUSTOMIZATIONS THAT VARY FROM THE CONVENTIONS
+
+  To get an idea of the variables available to customize your applicaiton,
+  including its installation location and the database locations look at the
+  following files:
+
+    .\core\configuration.asp
+	.\core\config\globals.asp
+
+TROUBLESHOOTING ON LOCALHOST
+
+  Getting strange errors creating new pages in the admin?
+
+  In order to create pages from the administration web interface, IIS must be
+  given permission to create files in your project folder. The IUSR_ must have
+  write permissions on the site folder.
+
+  This was my solution to getting around not having a url rewrite module
+  available on the production server (1and1.com).
+
+  The file created can be placed in subfolders and its contents are simply an
+  include of 404.asp (the file that currently drives everything on the site).
